@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\usepackage{tikz-cd}
+
+\setcounter{section}{-1}
+
+% \usepackage{multicol}
+% \setlength{\columnsep}{1cm}
+
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{example}{Example}
+\newtheorem*{remarks}{Remarks}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+    \section{Review and Miscellanea}
+    This chapter adopts Hoffman's definition for clearer presentations.
+    % \setcounter{subsection}{-1}
+    \subsection{Vector Spaces}
+    A finite dimensional vector space is the fundamental setting for matrix analysis.
+    \subsubsection{Scalar Field}
+    \begin{definition}
+        Field \(\mathbb{F}\) is the set together with addition and
+        multiplication. A field must satisfy the following properties:
+        \begin{enumerate}
+            \item Addition is commutative, \[x+y=y+x\] for all \(x\) and \(y\) in \(\mathbb{F}\).
+            \item Addition is associative, \[x+(y+z)=(x+y)+z\] for all \(x\), \(y\) and \(z\) in \(\mathbb{F}\).
+            \item There is a unique element 0 (zero) in \(\mathbb{F}\) such that \(x+0=x\), for every \(x\) in \(\mathbb{F}\).
+            \item To each \(x\) in \(\mathbb{F}\) there corresponds a unique element \((-x)\) in \(\mathbb{F}\) such that \(x + (-x) = 0\).
+            \item Multiplication is commutative, \[xy=yx\] for all \(x\) and \(y\) in \(\mathbb{F}\).
+            \item Multiplication is associative, \[x(yz)=(xy)z\] for all \(x\), \(y\), and \(z\) in \(\mathbb{F}\).
+            \item There is a unique element 1 (one) in \(\mathbb{F}\) such that \(x1=x\), for every \(x\) in \(\mathbb{F}\).
+            \item To each non-zero \(x\) in \(\mathbb{F}\) there corresponds a unique element \(x^{-1}\) (or \(1/x\)) in \(\mathbb{F}\) such that \(xx^{-1}=1\).
+            \item Multiplication distributes over addition; that is, \(x(y+z)=xy+xz\) for all \(x\), \(y\), and \(z\) in \(\mathbb{F}\).
+        \end{enumerate}
+    \end{definition}
+    \begin{remarks}
+        If \(\mathbb{F}\) is a field, it may be possible to add the unit 1 to itself
+        a finite number of times and obtain 0: \[1+1+\cdots+1=0\] That does not happen in
+        the complex field (or in any subfield thereof). If it does happen in a field \(\mathbb{F}\),
+        then the least \(n\) such that the sum of \(n\) 1's is 0 is called the characteristic
+        of the field \(\mathbb{F}\). If this does not happen in \(\mathbb{F}\), then it it
+        is called a field of characteristic zero.
+    \end{remarks}
+    \begin{definition}
+        A vector space (or linear space) consists of the following:
+        \begin{enumerate}
+            \item a field \(\mathbb{F}\) of scalars;
+            \item a set \(\mathbb{V}\) of objects, called vectors;
+            \item a rule (or operation), called vector addition, which associates each pair of vectors \(\vec{\alpha}\), \(\vec{\beta}\) in \(\mathbb{V}\) a vector \(\vec{\alpha}+\vec{\beta}\) in \(\mathbb{V}\), called the sum of \(\vec{\alpha}\) and \(\vec{\beta}\), in such a way that
+            \begin{enumerate}
+                \item addition is commutative, \(\vec{\alpha}+\vec{\beta}=\vec{\beta}+\vec{\alpha}\);
+                \item addition is associative, \(\vec{\alpha}+(\vec{\beta}+\vec{\gamma})=(\vec{\alpha}+\vec{\beta})+\vec{\gamma}\);
+                \item there is a unique vector 0 in \(\mathbb{V}\), called the zero vector, such that \(\vec{\alpha}+0=\vec{\alpha}\) for all \(\vec{\alpha}\) in \(\mathbb{V}\);
+                \item for each vector \(\vec{\alpha}\) in \(\mathbb{V}\) there exists a unique vector \(-\vec{\alpha}\) in \(\mathbb{V}\) such that \(\vec{\alpha}+(-\vec{\alpha})=0\).
+            \end{enumerate}
+            \item a rule (or operation), called scalar multiplication, which associates with each scalar \(c\) in \(\mathbb{F}\) and vector \(c\vec{\alpha}\) in \(\mathbb{F}\), called the product of \(c\) and \(\alpha\), in such a way that
+            \begin{enumerate}
+                \item \(1\vec{\alpha}=\vec{\alpha}\) for every \(\vec{\alpha}\) in \(\mathbb{V}\);
+                \item \((c_1c_2)\vec{\alpha}=c_1(c_2 \vec{\alpha})\);
+                \item \(c(\vec{\alpha}+\vec{\beta})=c \vec{\alpha} + c \vec{\beta}\);
+                \item \((c_{1}+c_{2})\vec{\alpha} = c_{1} \vec{\alpha} + c_{2} \vec{\alpha}\).
+            \end{enumerate}
+        \end{enumerate}
+    \end{definition}
+
+    \subsubsection{Subspaces, span, and linear combinations}
+    \begin{definition}
+        A vector \(\vec{\beta}\) in \(\mathbb{V}\) is said to be a linear combination of
+        the vectors \(\vec{\alpha_{1}}, \cdots, \vec{\alpha_{n}}\) in \(\mathbb{V}\) provided there
+        exists scalars \(c_{1}, \cdots, c_{n}\) in \(\mathbb{F}\) such that 
+        \begin{equation*}
+            \begin{split}
+                \vec{\beta}&=c_{1} \vec{\alpha_{1}} + \cdots + c_{n} \vec{\alpha_n} \\ &= \sum_{i=1}^{n} c_{i} \vec{\alpha}_{i}
+            \end{split}
+        \end{equation*}
+    \end{definition}
+
+    \begin{definition}
+        Let \(\mathbb{V}\) be a vector space over the field \(\mathbb{F}\). A subspace of
+        \(\mathbb{V}\) is a subset \(\mathbb{W}\) of \(\mathbb{V}\) which is itself a vector
+        space over \(\mathbb{F}\) with the operations of vector addition and scalar multiplication
+        on \(\mathbb{V}\).
+    \end{definition}
+    \begin{theorem}
+        A non-empty subset \(\mathbb{W}\) of \(\mathbb{V}\) is a subspace of \(\mathbb{V}\)
+        if and only if for each pair of vectors \(\vec{\alpha}\), \(\vec{\beta}\) in \(\mathbb{W}\)
+        and each scalar \(c\) in \(\mathbb{F}\) the vector \(c \vec{\alpha} + \vec{\beta}\) is
+        again in \(\mathbb{W}\).
+    \end{theorem}
+    \begin{proof}
+        Suppose \(\mathbb{W}\) is a non-empty subset of \(\mathbb{V}\) such that 
+        \(c \vec{\alpha} + \vec{\beta}\) belongs to \(\mathbb{W}\) for all vectors \(\vec{\alpha}\),
+        \(\vec{\beta}\) in \(\mathbb{W}\) and all scalars \(c\) in \(\mathbb{F}\). Since \(\mathbb{W}\)
+        is non-empty, there is a vector \(\vec{\rho}\) in \(\mathbb{W}\), and hence 
+        \((-1)\vec{\rho} + \vec{\rho}= 0\) is in \(\mathbb{W}\). Then if \(\vec{\alpha}\)
+        is any vector in \(\mathbb{W}\) and c any scalar, the vector \(c \vec{\alpha} = c \vec{\alpha} + 0\)
+        is in \(\mathbb{W}\). In particular, \((-1) \vec{\alpha} =- \vec{\alpha}\) is in \(\mathbb{W}\).
+        Finally, if \(\vec{\alpha}\) and \(\vec{\beta}\) are in \(\mathbb{W}\), then 
+        \(\vec{\alpha} + \vec{\beta}=1 \vec{\alpha} + \vec{\beta}\) is in \(\mathbb{W}\).
+        Thus \(\mathbb{W}\) is a subspace of \(\mathbb{V}\).
+        Conversely, if \(\mathbb{W}\) is a subspace of \(\mathbb{V}\), \(\vec{\alpha}\)
+        and \(\vec{\beta}\) are in \(\mathbb{W}\), and \(c\) is a scalar, certainly
+        \(c \vec{\alpha} + \vec{\beta}\) is in \(\mathbb{W}\).
+    \end{proof}
+    \begin{lemma}
+        If \(\mathbf{A}\) is an \(m \times n\) matrix over \(\mathbb{F}\) and 
+        \(\mathbf{B}\), \(\mathbf{C}\) are \(n \times p\) matrices over \(\mathbb{F}\), then
+        \begin{equation}
+            \label{}
+            \mathbf{A}(d \mathbf{B} + \mathbf{C}) = d(\mathbf{A} \mathbf{B}) + \mathbf{A}\mathbf{C}
+        \end{equation}
+        for each scalar \(d\) in \(\mathbb{F}\).
+    \end{lemma}
+    \begin{proof}
+        \begin{equation*}
+            \begin{split}
+                [\mathbf{A}(d \mathbf{B} + \mathbf{C})]_{ij} &= \sum_{k=1}^{n} a_{ik}(d \mathbf{B} + \mathbf{C})_{kj}\\
+                                                             &= \sum_{k=1}^{n} a_{ik}(d b_{kj} + c_{kj})\\
+                                                             &= \sum_{k=1}^{n} (d a_{ik} b_{kj} + a_{ik} c_{kj})\\
+                                                             &= d \sum_{k=1}^{n} a_{ik} b_{kj} + \sum_{k=1}^{n} a_{ik} c_{kj}\\
+                                                             &= d(\mathbf{A} \mathbf{B})_{ij} + (\mathbf{A} \mathbf{C})_{ij}\\
+                                                             &= (d (\mathbf{A} \mathbf{B}) + \mathbf{A} \mathbf{C})_{ij}
+            \end{split}
+        \end{equation*}
+    \end{proof}
+    \begin{theorem}
+        Let \(\mathbb{V}\) be a vector space over the field \(\mathbb{F}\). The intersection
+        of any collection of subspcaces of \(\mathbb{V}\) is a subspace of \(\mathbb{V}\).
+    \end{theorem}
+    \begin{proof}
+        Let \({\mathbb{W}_{a}}\) be a collection of subspaces of \(\mathbb{V}\), and let \(\mathbb{W}=\cap_{a} \(\mathbb{W}\)_{a}\)
+    \end{proof}
+\end{document}

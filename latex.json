@@ -1,0 +1,190 @@
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	
+	// brackets
+	"parentheses":{
+		"prefix": "(",
+		"body": "\\left$1\\right$0",
+		"description": "parentheses"
+	},
+
+	"square brackets":{
+		"prefix": "[",
+		"body": "\\lbrack$1\\rbrack$0",
+		"description": "square brackets"
+	},
+
+	"angle brackets":{
+		"prefix": "<",
+		"body": "\\langle$1\\rangle$0",
+		"description": "angle brackets"
+	},
+
+	"curly brackets":{
+		"prefix": "{",
+		"body": "{$1}$0",
+		"description": "curly brackets"
+	},
+
+	// modes
+	"inline math":{
+		"prefix": "il",
+		"body": "\\($1\\)$0",
+		"description": "inline math mode"
+	},
+
+	"highlight math":{
+		"prefix": "hl",
+		"body": "\\[$1\\]$0",
+		"description": "highlight math mode"
+	},
+
+	// Greek letters
+	"alpha":{
+		"prefix": "af",
+		"body": "\\alpha",
+		"description": "Greek character alpha"
+	},
+
+	"beta":{
+		"prefix": "bt",
+		"body": "\\beta",
+		"description": "Greek character beta"
+	},
+
+	"gamma":{
+		"prefix": "ga",
+		"body": "\\gamma",
+		"description": "Greek character gamma"
+	},
+
+	"rho":{
+		"prefix": "rh",
+		"body": "\\rho",
+		"description": "Greek character rho"
+	},
+
+	// shortcuts
+	"subscripts":{
+		"prefix": "su",
+		"body": "$1_{$2}$0",
+		"description": "subscripts"
+	},
+
+	"upperscripts":{
+		"prefix": "up",
+		"body": "$1^{$2}$0",
+		"description": "upperscripts"
+	},
+
+	"cdots":{
+		"prefix": "...",
+		"body": "\\cdots",
+		"description": "horizontal dots"
+	},
+
+	"vdots":{
+		"prefix": "v...",
+		"body": "\\vdots",
+		"description": "vertical dots"
+	},
+
+	"linear mapping":{
+		"prefix": "lmap",
+		"body": "\\($1 : $2 \\rightarrow $3\\)",
+		"description": "linear mapping"
+	},
+
+	"less or equal than":{
+		"prefix": "leq",
+		"body": "\\(\\leq\\)",
+		"description": "less or equal than"
+	},
+
+	"right arrow":{
+		"prefix": "to",
+		"body": "\\(\\rightarrow\\)",
+		"description": "right arrow"
+	},
+
+	// some literal abbreviations
+	"such that":{
+		"prefix": "st",
+		"body": "such that ",
+		"description": "abbreviation for 'such that'"
+	},
+
+	"if and only if":{
+		"prefix": "iff",
+		"body": "if and only if",
+		"description": "abbreviation for 'if and only if'"
+	},
+
+	// math concepts
+	"set":{
+		"prefix": "ss",
+		"body": "\\(\\mathbb{$1}\\)$0",
+		"description": "Set notation"
+	},
+
+	"set in math mode":{
+		"prefix": "iss",
+		"body": "\\mathbb{$1}$0",
+		"description": "Set notation in math mode"
+	},
+
+	"vector":{
+		"prefix": "vv",
+		"body": "\\(\\vec{$0}\\)",
+		"description": "Vector in plain mode"
+	},
+
+	"vector in math mode":{
+		"prefix": "ivv",
+		"body": "\\vec{$0}",
+		"description": "Vector in math mode"
+	},
+
+	"matrix symbol":{
+		"prefix": "ma",
+		"body": "\\(\\mathbf{$1}\\)$0",
+		"description": "matrix symbol"
+	},
+
+	"matrix symbol in math mode":{
+		"prefix": "ima",
+		"body": "\\mathbf{$1}$0",
+		"description": "matrix symbol in math mode"
+	},
+
+	"summation":{
+		"prefix": "sum",
+		"body": "\\sum_{$1}^{$2} $3_{$4}$0",
+		"description": "Summation in math mode"
+	},
+
+	"double summation":{
+		"prefix": "dsum",
+		"body": "\\sum_{$1}^{$2} \\sum_{$3}^{$4} $5_{$6}$0",
+		"description": "Double summation in math mode"
+	},
+
+	"times":{
+		"prefix": "ti",
+		"body": "\\times",
+		"description": "Times operator x"
+	},
+}
+
