@@ -135,29 +135,63 @@
         of any collection of subspcaces of \(\mathbb{V}\) is a subspace of \(\mathbb{V}\).
     \end{theorem}
     \begin{proof}
-        Hoffman p36
+        Let \({\mathbb{W}_a}\) be a collection of subspaces of \(\mathbb{V}\), and let 
+        \(\mathbb{W}=\cap_{a} \mathbb{W}_{a}\) be their intersection. Recall that 
+        \(\mathbb{W}\) is defined as the set of all elements belonging to every \(\mathbb{W}_a\).
+        Since each \(\mathbb{W}_{a}\) is a subspace, each contains the zero vector. Thus 
+        zero is inthe intersection of \(\mathbb{W}\), and \(\mathbb{W}\) is non-empty. Let
+        \(\vec{\alpha}\) and \(\vec{\beta}\) be vectors in \(\mathbb{W}\) and let \(c\) be a scalar.
+        By definition of \(\mathbb{W}\), both \(\vec{\alpha}\) and \(\vec{\beta}\) belong to each
+        \(\mathbb{W}_{a}\), and because each \(\mathbb{W}_{a}\) is a subspace, the vector \((c \vec{\alpha}+\vec{\beta})\)
+        is in every \(\mathbb{W}_a\). Thus \(c \vec{\alpha} + \vec{\beta}\) is in \(\mathbb{W}\).
+        By Theorem 1, \(\mathbb{W}\) is a subspace of \(\mathbb{V}\).
     \end{proof}
     \begin{definition}
         Let \(\mathbb{S}\) be a set of vectors in a vector space \(\mathbb{V}\). The subspace
         spanned by \(\mathbb{S}\) is defined to be the intersection \(\mathbb{W}\) of all 
         subspaces of \(\mathbb{V}\) which contain \(\mathbb{S}\). When \(\mathbb{S}\) is a 
-        finite set of vectors, \(\mathbb{S} = {\alpha_1, \alpha_2, \cdots, \alpha_n}\), we 
-        shall simply call \(\mathbb{W}\) the subspace spanned by the vectors \(\alpha_1, \alpha_2, \cdots, \alpha_n\).
+        finite set of vectors, \(\mathbb{S} = {\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n}\), we 
+        shall simply call \(\mathbb{W}\) the subspace spanned by the vectors \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\).
     \end{definition}
     \begin{theorem}
         The subspace spanned by a non-empty subset \(\mathbb{S}\) of a vector space \(\mathbb{V}\)
         is the set of all linear combinations of vectors in \(\mathbb{S}\).
     \end{theorem}
     \begin{proof}
-        Hoffman p37
+        Let \(\mathbb{W}\) be the subspace spanned by \(\mathbb{S}\). Then each linear combination
+        \begin{equation*}
+            \vec{\alpha} = x_{1} \vec{\alpha}_1 + x_{2} \vec{\alpha}_2 + \cdots + x_{m} \vec{\alpha}_m
+        \end{equation*}
+        of vector \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_m\) in \(\mathbb{S}\)
+        is clearly in \(\mathbb{W}\). Thus \(\mathbb{W}\) contains the set \(\mathbb{L}\) of all 
+        linear combinations of vectors in \(\mathbb{S}\). The set \(\mathbb{L}\), on the other hand, 
+        contains \(\mathbb{S}\) and is non-empty. If \(\vec{\alpha}\), \(\vec{\beta}\) belong
+        to \(\mathbb{L}\) then \(\vec{\alpha}\) is a linear combination,
+        \begin{equation*}
+            \vec{\alpha} = x_{1} \vec{\alpha}_1 + x_{2} \vec{\alpha}_2 + \cdots + x_{m} \vec{\alpha}_m
+        \end{equation*}
+        of vectors \(\vec{\alpha}_i\) in \(\mathbb{S}\), and \(\vec{\beta}\) is a linear combination,
+        \begin{equation*}
+            \vec{\beta} = y_{1} \vec{\beta}_1 + y_{2} \vec{\beta}_2 + \cdots + y_{n} \vec{\beta}_n
+        \end{equation*}
+        of vectors \(\vec{\beta}_i\) in \(\mathbb{S}\). For each scalar \(c\), 
+        \begin{equation*}
+            c \vec{\alpha} + \vec{\beta} = \sum_{i=1}^{m} c x_{i} \vec{\alpha}_i + \sum_{j=1}^{n} y_{i} \vec{\beta}_i
+        \end{equation*}
+        Hence \(c \vec{\alpha} + \vec{\beta}\) belongs to \(\mathbb{L}\). Thus \(\mathbb{L}\)
+        is a subspace of \(\mathbb{V}\).
+        Now we have shown that \(\mathbb{L}\) is a subspace of \(\mathbb{V}\) which contains
+        \(\mathbb{S}\), and also that any subspace which contains \(\mathbb{S}\) contains \(\mathbb{L}\). 
+        It follows that \(\mathbb{L}\) is the intersection of all subspaces containing \(\mathbb{S}\), 
+        i.e., that \(\mathbb{L}\) is the subspace spanned by the set \(\mathbb{S}\).
     \end{proof}
     \begin{definition}
         If \(\mathbb{S}_1, \mathbb{S}_2, \cdots, \mathbb{S}_n\) are subsets of a vector
         space \(\mathbb{V}\), the set of all sums
         \begin{equation*}
-            \alpha_1 + \alpha_2 + \cdots + \alpha_k
+            \vec{\alpha}_1 + \vec{\alpha}_2 + \cdots + \vec{\alpha}_k
         \end{equation*}
-        of vectors \(\alpha_{i}\) in \(\mathbb{S}_i\) is called the sum of the subsets
+        of vectors \(\vec{\alpha}_{i}\) in \(\mathbb{S}_i\) is called the sum of the subsets
         \(\mathbb{S}_1, \mathbb{S}_2, \cdots, \mathbb{S}_k\)
     \end{definition}
 \end{document}
