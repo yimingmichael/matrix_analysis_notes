@@ -6,7 +6,7 @@
 \usepackage{amsmath}
 
 \usepackage{tikz-cd}
-
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 \setcounter{section}{-1}
 
 % \usepackage{multicol}
@@ -17,6 +17,7 @@
 \newtheorem*{remarks}{Remarks}
 \newtheorem*{definition}{Definition}
 \newtheorem{theorem}{Theorem}
+\newtheorem*{corollary}{Corollary}
 
 \begin{document}
     \section{Review and Miscellanea}
@@ -24,6 +25,7 @@
     % \setcounter{subsection}{-1}
     \subsection{Vector Spaces}
     A finite dimensional vector space is the fundamental setting for matrix analysis.
+    % scalar field
     \subsubsection{Scalar Field}
     \begin{definition}
         Field \(\mathbb{F}\) is the set together with addition and
@@ -48,6 +50,9 @@
         of the field \(\mathbb{F}\). If this does not happen in \(\mathbb{F}\), then it it
         is called a field of characteristic zero.
     \end{remarks}
+
+    % vector space
+    \subsubsection{Vector spaces}
     \begin{definition}
         A vector space (or linear space) consists of the following:
         \begin{enumerate}
@@ -70,6 +75,7 @@
         \end{enumerate}
     \end{definition}
 
+    % subspaces, span, and linear combinations
     \subsubsection{Subspaces, span, and linear combinations}
     \begin{definition}
         A vector \(\vec{\beta}\) in \(\mathbb{V}\) is said to be a linear combination of
@@ -192,6 +198,69 @@
             \vec{\alpha}_1 + \vec{\alpha}_2 + \cdots + \vec{\alpha}_k
         \end{equation*}
         of vectors \(\vec{\alpha}_{i}\) in \(\mathbb{S}_i\) is called the sum of the subsets
-        \(\mathbb{S}_1, \mathbb{S}_2, \cdots, \mathbb{S}_k\)
+        \(\mathbb{S}_1, \mathbb{S}_2, \cdots, \mathbb{S}_k\) and is
+        denoted by 
+        \[\mathbb{S}_1+\mathbb{S}_2+\cdots+\mathbb{S}_k\]
+        or by 
+        \[\sum_{i=1}^{k} \mathbb{S}_{i}\]
     \end{definition}
+
+    % linear dependence and linear independence
+    \subsubsection{Linear dependence and linear independence}
+    \begin{definition}
+        Let \(\mathbb{V}\) be a vector space over \(\mathbb{F}\). A subset \(\mathbb{S}\)
+        of \(\mathbb{V}\) is said to be linearly dependent (or simply, dependent) if there 
+        exists distinct vectors \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\)
+        in \(\mathbb{S}\) and scalars \(c_1, c_2, \cdots, c_n\) in \(\mathbb{F}\), not all
+        of which are \(0\), such that 
+        \begin{equation*}
+            c_1 \vec{\alpha}_1 + c_2 \vec{\alpha}_2 + \cdots + c_n \vec{\alpha}_n = 0
+        \end{equation*}
+        A set which is not linearly dependent is called linearly independent. If the set 
+        \(\mathbb{S}\) contains only finitely many vectors \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots \vec{\alpha}_n\),
+        we someimtes say that \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\) is 
+        dependent (or independent) instead of saying \(\mathbb{S}\) is dependent (or independent).
+    \end{definition}
+
+    % basis
+    \subsubsection{Basis}
+    \begin{definition}
+        Let \(\mathbb{V}\) be a vector space. A basis for \(\mathbb{V}\) is linearly
+        independent set of vectors in \(\mathbb{V}\) which spans the space \(\mathbb{V}\).
+        The space \(\mathbb{V}\) is finite-dimensional if it has a finite basis.
+    \end{definition}
+    \begin{theorem}
+        Let \(\mathbb{V}\) be a vector space which is spanned by a finite set of vectors 
+        \(\vec{\beta}_1, \vec{\beta}_2, \cdots, \vec{\beta}_m\). Then any independent set 
+        of vectors in \(\mathbb{V}\) is finite and contains no more than \(m\) elements.
+    \end{theorem}
+    \begin{proof}
+        To prove the theorem it suffices to show that every subset \(\mathbb{S}\) of
+        \(\mathbb{V}\) which contains more than \(m\) vectors is linearly dependent.
+        Let \(\mathbb{S}\) be such a set. In \(\mathbb{S}\) there are distinct vectors 
+        \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\) where \(n > m\). 
+        Since \(\vec{\beta}_1, \cdots, \vec{\beta}_m\) span \(\mathbb{V}\), there exist
+        scalars \(A_{ij}\) in \(\mathbb{F}\) such that 
+        \begin{equation*}
+            \vec{\alpha}_j = \sum_{i=1}^{m} A_{ij} \vec{\beta}_i
+        \end{equation*}
+        For any \(n\) scalars \(x_1, x_2, \cdots, x_n\), we have 
+        \begin{equation*}
+            \begin{split}
+                x_1 \vec{\alpha}_1 + \cdots + x_n \vec{\alpha}_n &= \sum_{j=1}^{n} x_{j} \vec{\alpha}_j \\
+                                                                 &= \sum_{j=1}^{n} x_{j} \sum_{i=1}^{m} A_{ij} \vec{\beta}_i \\
+                                                                 &= \sum_{j=1}^{n} \sum_{i=1}^{m} (A_{ij} x_j) \vec{\beta}_{i} \\
+                                                                 &= \sum_{i=1}^{m} (\sum_{j=1}^{n} A_{ij}x_{j}) \vec{\beta}_{i}
+            \end{split}
+        \end{equation*}
+        Since \(n > m\), it implies there exist scalars \(x_1, x_2, \cdots, x_n\) not all \(0\) such that 
+        \begin{equation*}
+            \sum_{j=i}^{n} A_{ij}x_j=0, \ \ \ \ \ \ 1 \leq i \leq m.
+        \end{equation*}
+        Hence \(x_1 \vec{\alpha}_1 + x_2 \vec{\alpha}_2 + \cdots + x_n \vec{\alpha}_n = 0\). 
+        This allows that \(\mathbb{S}\) is a linearly dependent set.
+    \end{proof}
+    \begin{corollary}
+        If \(\mathbb{V}\) is 
+    \end{corollary}
 \end{document}
