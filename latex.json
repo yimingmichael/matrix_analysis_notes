@@ -59,7 +59,7 @@
 	},
 
 	"beta":{
-		"prefix": "bt",
+		"prefix": "be",
 		"body": "\\beta",
 		"description": "Greek character beta"
 	},
@@ -157,6 +157,30 @@
 		"description": "Vector in math mode"
 	},
 
+	"vector alpha":{
+		"prefix": "vaf",
+		"body": "\\(\\vec{\\alpha}$0\\)",
+		"description": "vector alpha"
+	},
+
+	"vector alpha in math mode":{
+		"prefix": "ivaf",
+		"body": "\\vec{\\alpha}",
+		"description": "vector alpha in math mode"
+	},
+
+	"vector beta":{
+		"prefix": "vbe",
+		"body": "\\(\\vec{\\beta}$0\\)",
+		"description": "vector beta"
+	},
+
+	"vector beta in math mode":{
+		"prefix": "ivbe",
+		"body": "\\vec{\\beta}",
+		"description": "vector beta in math mode"
+	},
+
 	"matrix symbol":{
 		"prefix": "ma",
 		"body": "\\(\\mathbf{$1}\\)$0",
@@ -170,13 +194,13 @@
 	},
 
 	"summation":{
-		"prefix": "sum",
+		"prefix": "sm",
 		"body": "\\sum_{$1}^{$2} $3_{$4}$0",
 		"description": "Summation in math mode"
 	},
 
 	"double summation":{
-		"prefix": "dsum",
+		"prefix": "dsm",
 		"body": "\\sum_{$1}^{$2} \\sum_{$3}^{$4} $5_{$6}$0",
 		"description": "Double summation in math mode"
 	},
@@ -187,4 +211,3 @@
 		"description": "Times operator x"
 	},
 }
-
