@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.4.25)  25 APR 2019 13:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.4.25)  25 APR 2019 17:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -665,6 +665,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks41
 )
 \c@theorem=\count123
+\c@corollary=\count124
  (/home/scg/matrix_analysis_notes/matrixanalysis.aux)
 \openout1 = `matrixanalysis.aux'.
 
@@ -682,16 +683,16 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
  ABD: EveryShipout initializing macros (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count125
 \scratchdimen=\dimen173
 \scratchbox=\box39
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count126
+\nofMParguments=\count127
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count127
+\MPscratchCnt=\count128
 \MPscratchDim=\dimen174
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
@@ -770,20 +771,20 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] (/home/scg/matrix_analysis_notes/matrixanalysis.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] (/home/scg/matrix_analysis_notes/matrixanalysis.aux) ) 
 Here is how much of TeX's memory you used:
- 14372 strings out of 493013
- 286120 string characters out of 6135682
- 344408 words of memory out of 5000000
- 17628 multiletter control sequences out of 15000+600000
+ 14376 strings out of 493013
+ 286166 string characters out of 6135682
+ 344436 words of memory out of 5000000
+ 17632 multiletter control sequences out of 15000+600000
  7822 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,17n,84p,538b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/scg/matrix_analysis_notes/matrixanalysis.pdf (5 pages, 132939 bytes).
+Output written on /home/scg/matrix_analysis_notes/matrixanalysis.pdf (6 pages, 137993 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,7 +17,7 @@
 \newtheorem*{remarks}{Remarks}
 \newtheorem*{definition}{Definition}
 \newtheorem{theorem}{Theorem}
-\newtheorem*{corollary}{Corollary}
+\newtheorem{corollary}{Corollary}
 
 \begin{document}
     \section{Review and Miscellanea}
@@ -261,6 +261,62 @@
         This allows that \(\mathbb{S}\) is a linearly dependent set.
     \end{proof}
     \begin{corollary}
-        If \(\mathbb{V}\) is 
+        If \(\mathbb{V}\) is a finite-dimensional vector space, then any two bases of
+        \(\mathbb{V}\) have the same (finite) number of elements.
     \end{corollary}
+    \begin{proof}
+        Since \(\mathbb{V}\) is finite-dimensional, it has the finite basis
+        \begin{equation*}
+            {\vec{\beta}_1, \vec{\beta}_2, \cdots, \vec{\beta}_m}
+        \end{equation*}
+        By Theorem 4 every basis of \(\mathbb{V}\) is finite and contains no more than 
+        \(m\) elements. Thus if \({\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n}\)
+        is a basis, \(n \leq m\). By the same argument, \(m \leq n\). Hence \(m=n\).
+    \end{proof}
+    \begin{corollary}
+        Let \(\mathbb{V}\) be a finite-dimensional vector space and let \(n=\dim{V}\). Then 
+        \begin{enumerate}
+            \item any subset of \(\mathbb{V}\) which contains more than \(n\) vectors is linearly dependent;
+            \item no subset of \(\mathbb{V}\) which contains fewer than \(n\) vectors can span \(\mathbb{V}\).
+        \end{enumerate}
+    \end{corollary}
+    \begin{lemma}
+        Let \(\mathbb{S}\) be a linearly independent subset of a vector space \(\mathbb{V}\).
+        Suppose \(\vec{\beta}\) is a vector in \(\mathbb{V}\) which is not in the subspace
+        spanned by \(\mathbb{S}\). Then the set obtained by adjoining \(\vec{\beta}\) to 
+        \(\mathbb{S}\) is linearly independent.
+    \end{lemma}
+    \begin{proof}
+        Suppose \(\vec{\alpha}_1, \cdots, \vec{\alpha}_m\) are distinct vectors in \(\mathbb{S}\) and that 
+        \begin{equation*}
+            c_1 \vec{\alpha}_1 + \cdots + c_m \vec{\alpha}_m + b \vec{\beta} = 0
+        \end{equation*}
+        Then \(b=0\); for otherwise,
+        \begin{equation*}
+            \vec{\beta} = (-c_1/b)\vec{\alpha}_1 + \cdots + (-c_m/b)\vec{\alpha}_m
+        \end{equation*}
+        and \(\vec{\beta}\) is in the subspace spanned by \(\mathbb{S}\). Thus 
+        \(c_1 \vec{\alpha}_1 + \cdots + c_m \vec{\alpha}_m = 0\), and since \(\mathbb{S}\) 
+        is linearly independent set each \(c_i=0\).
+    \end{proof}
+    \begin{theorem}
+        If \(\mathbb{W}\) is a subspace of a finite-dimensional vector space \(\mathbb{V}\), 
+        every linearly independent subset of \(\mathbb{W}\) is finite and is part of a (finite) 
+        basis for \(\mathbb{W}\).
+    \end{theorem}
+    \begin{proof}
+        Suppose \(\mathbb{S}_0\) is a linearly independent subset of \(\mathbb{W}\). If 
+        \(\mathbb{S}\) is a linearly independent subset of \(\mathbb{W}\) containing \(\mathbb{S}_0\),
+        then \(\mathbb{S}\) is also a linearly independent subset of \(\mathbb{V}\); since 
+        \(\mathbb{V}\) is finite-dimensional, \(\mathbb{S}_0\) contains no more than \(\dim{V}\) elements.
+
+        We extend \(\mathbb{S}_0\) to a basis for \(\mathbb{W}\), as follows. If \(\mathbb{S}_0\) 
+        spans \(\mathbb{W}\), then \(\mathbb{S}_0\) is a basis for \(\mathbb{W}\) and we are done.
+        If \(\mathbb{S}_0\) does not span \(\mathbb{W}\), we use the preceding lemma to find a 
+        vector \(\vec{\beta}_1\) in \(\mathbb{W}\) such that the set \(\mathbb{S}_1=\mathbb{S}_0 \cup {\{\vec{\beta}_1\}}\) 
+        is independent. If \(\mathbb{S}_0\) spans \(\mathbb{W}\), fine. If not, apply the lemma 
+        to obtain a vector \(\vec{\beta}_2\) in \(\mathbb{W}\) such that \(\mathbb{S}_2=\mathbb{S}_1 \cup{\{\vec{\beta}_2\}}\)
+        is independent. If we continue in this way, then (in not more than \(\dim{\mathbb{V}}\) steps) we reach a set 
+        \[\mathbb{S}_m=\mathbb{S}_0 \cup{\{\vec{\beta}_1, \cdots, \vec{\beta}_m\}}\] 
+    \end{proof}
 \end{document}

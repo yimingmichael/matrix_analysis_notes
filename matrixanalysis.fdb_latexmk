@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1556170552 "/home/scg/matrix_analysis_notes/matrixanalysis.tex" "/home/scg/matrix_analysis_notes/matrixanalysis.pdf" "matrixanalysis" 1556170552
+["pdflatex"] 1556183643 "/home/scg/matrix_analysis_notes/matrixanalysis.tex" "/home/scg/matrix_analysis_notes/matrixanalysis.pdf" "matrixanalysis" 1556183644
   "/etc/texmf/web2c/texmf.cnf" 1554368575 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/scg/matrix_analysis_notes/matrixanalysis.aux" 1556170552 801 e3131e7e0102fa831a15c33a916213b2 ""
-  "/home/scg/matrix_analysis_notes/matrixanalysis.tex" 1556170552 16468 c1468524980c85c3da8295f9953ad259 ""
+  "/home/scg/matrix_analysis_notes/matrixanalysis.aux" 1556183644 801 e3131e7e0102fa831a15c33a916213b2 ""
+  "/home/scg/matrix_analysis_notes/matrixanalysis.tex" 1556183643 20047 c3651ceaf86d1068b54658b14d2ffa51 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -142,11 +142,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1471618383 31348 3c11c993a1d7e4662292855f9f7c8e1b ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1556162915 1938010 a757a460f2fd82210c4d6c8c2cbaedc2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1556162955 3868438 01932f005c0eb57bc10fa097c4a07b79 ""
-  "matrixanalysis.aux" 1556170552 801 e3131e7e0102fa831a15c33a916213b2 ""
-  "matrixanalysis.tex" 1556170552 16468 c1468524980c85c3da8295f9953ad259 ""
+  "matrixanalysis.aux" 1556183644 801 e3131e7e0102fa831a15c33a916213b2 ""
+  "matrixanalysis.tex" 1556183643 20047 c3651ceaf86d1068b54658b14d2ffa51 ""
   (generated)
-  "matrixanalysis.pdf"
   "matrixanalysis.aux"
   "/home/scg/matrix_analysis_notes/matrixanalysis.pdf"
+  "matrixanalysis.pdf"
   "matrixanalysis.log"
   "/home/scg/matrix_analysis_notes/matrixanalysis.log"
