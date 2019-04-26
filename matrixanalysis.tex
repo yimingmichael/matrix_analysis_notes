@@ -260,6 +260,7 @@
         Hence \(x_1 \vec{\alpha}_1 + x_2 \vec{\alpha}_2 + \cdots + x_n \vec{\alpha}_n = 0\). 
         This allows that \(\mathbb{S}\) is a linearly dependent set.
     \end{proof}
+    \setcounter{corollary}{0}
     \begin{corollary}
         If \(\mathbb{V}\) is a finite-dimensional vector space, then any two bases of
         \(\mathbb{V}\) have the same (finite) number of elements.
@@ -274,7 +275,7 @@
         is a basis, \(n \leq m\). By the same argument, \(m \leq n\). Hence \(m=n\).
     \end{proof}
     \begin{corollary}
-        Let \(\mathbb{V}\) be a finite-dimensional vector space and let \(n=\dim{V}\). Then 
+        Let \(\mathbb{V}\) be a finite-dimensional vector space and let \(n=\dim{\mathbb{V}}\). Then 
         \begin{enumerate}
             \item any subset of \(\mathbb{V}\) which contains more than \(n\) vectors is linearly dependent;
             \item no subset of \(\mathbb{V}\) which contains fewer than \(n\) vectors can span \(\mathbb{V}\).
@@ -319,4 +320,87 @@
         is independent. If we continue in this way, then (in not more than \(\dim{\mathbb{V}}\) steps) we reach a set 
         \[\mathbb{S}_m=\mathbb{S}_0 \cup{\{\vec{\beta}_1, \cdots, \vec{\beta}_m\}}\] 
     \end{proof}
+    \setcounter{corollary}{0}
+    \begin{corollary}
+        If \(\mathbb{W}\) is a proper subspace of a finite-dimensional vector space 
+        \(\mathbb{V}\), then \(\mathbb{W}\) is finite-dimensional and \(\dim{\mathbb{W}} < \dim{\mathbb{V}}\).
+    \end{corollary}
+    \begin{proof}
+        We may suppose \(\mathbb{W}\) contains a vector \(\vec{\alpha} \neq 0\). By 
+        Theorem 5 and its proof, there is a basis of \(\mathbb{W}\) containing \(\vec{\alpha}\)
+        which contains no more than \(\dim{\mathbb{V}}\) elements. Hence \(\mathbb{W}\) is 
+        finite-dimensional, and \(\dim{\mathbb{W}} \leq \dim{\mathbb{V}}\). Since \(\mathbb{W}\)
+        is a proper subspace, there is a vector \(\vec{\beta}\) which is not in \(\mathbb{W}\).
+        Adjoining \(\vec{\beta}\) to any basis in \(\mathbb{W}\), we obtain a linearly 
+        independent subset of \(\mathbb{V}\). Thus \(\dim{\mathbb{W}} < \dim{\mathbb{V}}\).
+    \end{proof}
+    \begin{corollary}
+        In a finite-dimensional vector space \(\mathbb{V}\) every non-empty linearly 
+        independent set of vectors is part of a basis.
+    \end{corollary}
+    \begin{corollary}
+        Let \(\mathbf{A}\) be an \(n \times n\) matrix over a field \(\mathbb{F}\), 
+        and suppose the row vectors of \(\mathbf{A}\) form a linearly independent set 
+        of vectors in \(\mathbb{F}^n\). Then \(\mathbf{A}\) is invertible. 
+    \end{corollary}
+    \begin{proof}
+        Let \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\) be the row 
+        vectors of \(\mathbf{A}\), and suppose \(\mathbb{W}\) is the subspace of 
+        \(\mathbb{F}^n\) spanned by \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\). 
+        Since \(\vec{\alpha}_1, \vec{\alpha}_2, \cdots, \vec{\alpha}_n\) are linearly 
+        independent, the dimension of \(\mathbb{W}\) is \(n\). Corollary 1 shows that 
+        \(\mathbb{W}=\mathbb{F}^n\). Hence there exist scalars \(B_{ij}\) in \(\mathbb{F}\) 
+        such that 
+        \begin{equation*}
+            \vec{\epsilon} = \sum_{j=1}^{n} B_{ij}\vec{\alpha}_j,\ \ \ \ \ \ \ \ 1 \leq i \leq n
+        \end{equation*}
+        where \(\{\vec{\epsilon}_1, \vec{\epsilon}_2, \cdots, \vec{\epsilon}_n\}\) is the 
+        standard basis of \(\mathbb{F}^n\). Thus for the matrix \(\mathbf{B}\) with the 
+        entries \(B_{ij}\) we have \[\mathbf{B}\mathbf{A}=\mathbf{I}\]
+    \end{proof}
+    \begin{theorem}
+        If \(\mathbb{W}_1\) and \(\mathbb{W}_2\) are finite-dimensional subspaces of 
+        a vector space \(\mathbb{V}\), then \(\mathbb{W}_1+\mathbb{W}_2\) is finite-dimesional 
+        and 
+        \begin{equation*}
+            \dim{\mathbb{W}_1} + \dim{\mathbb{W}_2} = \dim{(\mathbb{W}_1 \cap \mathbb{W}_2)} + \dim{(\mathbb{W}_1 + \mathbb{W}_2)}
+        \end{equation*}
+    \end{theorem}
+    \begin{proof}
+        By Theorem 5 and its corollaries, \(\mathbb{W}_1 \cap \mathbb{W}_2\) has a finite 
+        basis \(\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k\}\) which is part of a basis 
+        \[\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k, \ \vec{\beta}_1, \cdots, \vec{\beta}_m\} \ for \  \mathbb{W}_1\]
+        and part of a basis 
+        \[\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k, \ \vec{\gamma}_1, \cdots, \vec{\gamma}_n\} \ for \  \mathbb{W}_2\]
+        The subspace \(\mathbb{W}_1 + \mathbb{W}_2\) is spanned by the vectors 
+        \[\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k, \ \vec{\beta}_1, \cdots, \vec{\beta}_m, \ \vec{\gamma}_1, \cdots, \vec{\gamma}_n\}\]
+        And these vectors form an independent set. For suppose
+        \begin{equation*}
+            \sum{x_i \vec{\alpha}_i} + \sum{y_j \vec{\beta}_j} + \sum{z_r \vec{\gamma}_r} = 0
+        \end{equation*}
+        Then 
+        \begin{equation*}
+            - \sum{z_r \vec{\gamma}_r} = \sum{x_i \vec{\alpha}_i} + \sum{y_j \vec{\beta}_j} 
+        \end{equation*}
+        which shows that \(\sum{z_r \vec{\gamma}_r}\) belongs to \(\mathbb{W}_1\). As \(\sum{z_r \vec{\gamma}_r}\)
+        also belongs to \(\mathbb{W}_2\) it follows that 
+        \[\sum{z_r \vec{\gamma}_r} = \sum{c_i \vec{\alpha}_i}\]
+        for certain scalars \(c_1, \cdots, c_k\). Because the set 
+        \[\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k, \ \vec{\gamma}_1, \cdots, \vec{\gamma}_n\}\]
+        is independent, each of the scalars \(z_r=0\). Thus
+        \[\sum{x_i \vec{\alpha}_i} + \sum{y_j \vec{\beta}_j}=0\]
+        and since 
+        \[\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k, \ \vec{\beta}_1, \cdots, \vec{\beta}_m\}\]
+        is also an independent set, each \(x_i=0\) and each \(y_j=0\). Thus,
+        \[\{\vec{\alpha}_1, \cdots, \vec{\alpha}_k, \ \vec{\beta}_1, \cdots, \vec{\beta}_m, \ \vec{\gamma}_1, \cdots, \vec{\gamma}_n\}\]
+        is a basis for \(\mathbb{W}_1 + \mathbb{W}_2\). Finally 
+        \begin{equation*}
+            \begin{split}
+                \dim{\mathbb{W}_1} + \dim{\mathbb{W}_2} &= (k+m)+(k+n) \\ 
+                                                        &= k + (m + k + n) \\ 
+                                                        &= \dim{(\mathbb{W}_1 \cap \mathbb{W}_2)} + \dim{(\mathbb{W}_1 + \mathbb{W}_2)}
+            \end{split}
+        \end{equation*}
+    \end{proof}
+
 \end{document}

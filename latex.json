@@ -70,6 +70,12 @@
 		"description": "Greek character gamma"
 	},
 
+	"epsilon":{
+		"prefix": "ep",
+		"body": "\\epsilon", 
+		"description": "Greek character epsilon"
+	},
+
 	"rho":{
 		"prefix": "rh",
 		"body": "\\rho",
@@ -179,6 +185,30 @@
 		"prefix": "ivbe",
 		"body": "\\vec{\\beta}",
 		"description": "vector beta in math mode"
+	},
+
+	"vector gamma":{
+		"prefix": "vga",
+		"body": "\\(\\vec{\\gamma}$1\\)$0",
+		"description": "vector gamma"
+	},
+
+	"vector gamma in math mode":{
+		"prefix": "ivga",
+		"body": "\\vec{\\gamma}",
+		"description": "vector gamma in math mode"
+	},
+
+	"vector epsilon":{
+		"prefix": "vep",
+		"body": "\\(\\vec{\\epsilon}$1\\)$0",
+		"description": "vector epsilon"
+	},
+
+	"vector epsilon in math mode":{
+		"prefix": "ivep",
+		"body": "\\vec{\\epsilon}",
+		"description": "vector epsilon in math mode"
 	},
 
 	"matrix symbol":{
