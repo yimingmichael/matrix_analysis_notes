@@ -118,6 +118,31 @@
         prime, then it must be a product of primes. But the fact that \(M \over \prod_{i=1}^k p_k\) 
         gives remainder not 0 but 1 shows \(M\) cannot be divided by the existing 
         product of primes, by definition, \(M\) is a prime, which contradicting the 
-        assumption.
+        assumption. So there must be infinite number of primes.
     \end{proof}
+    \begin{definition}
+        If \(a\) and \(b\) are integers, then \(a\) is a \textbf{divisor} of \(b\) if 
+        there is an integer \(d\) with \(b=ad\). We also say that \(a\) \textbf{divides} 
+        \(b\) or that \(b\) is a \textbf{multiple} of \(a\), and we denote this by \(a \mid b\)
+    \end{definition}
+    \begin{definition}
+        A \textbf{common divisor} of integers \(a\) and \(b\) is an integer \(c\) with 
+        \(c \mid a\) and \(c \mid b\). The \textbf{greatest common divisor} or \textbf{gcd} 
+        of \(a\) and \(b\), denoted by \((a, b)\), is defined by 
+        \begin{equation*}
+            (a, b) = \begin{cases}
+                0 \ if \  a=0=b\\
+                the\ largest\ common\ divisor\ of\ a\ and\ b\ otherwise
+            \end{cases}
+        \end{equation*}
+    \end{definition}
+    \begin{proposition}
+        If \(p\) is a prime and \(b\) any given integer, then 
+        \[
+            (p, b)=\begin{cases}
+                p\ if\ p \mid b\\
+                1\ otherwise
+            \end{cases}  
+        \]
+    \end{proposition}
 \end{document}

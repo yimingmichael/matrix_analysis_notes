@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1556519339 "/home/scg/matrix_analysis_notes/advancedmodernalgebra.tex" "/home/scg/matrix_analysis_notes/advancedmodernalgebra.pdf" "advancedmodernalgebra" 1556519340
+["pdflatex"] 1556524848 "/home/scg/matrix_analysis_notes/advancedmodernalgebra.tex" "/home/scg/matrix_analysis_notes/advancedmodernalgebra.pdf" "advancedmodernalgebra" 1556524888
   "/etc/texmf/web2c/texmf.cnf" 1554368575 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/scg/matrix_analysis_notes/advancedmodernalgebra.aux" 1556519340 324 8a4582f28af7be597f5dabc1b3ad75e8 ""
-  "/home/scg/matrix_analysis_notes/advancedmodernalgebra.tex" 1556519339 5976 ab9e93239899497ee877fc9cea7513e0 ""
+  "/home/scg/matrix_analysis_notes/advancedmodernalgebra.aux" 1556524849 324 8a4582f28af7be597f5dabc1b3ad75e8 ""
+  "/home/scg/matrix_analysis_notes/advancedmodernalgebra.tex" 1556524888 7096 a715d345c274ca3c6432417e5328d37a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -157,11 +157,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1471618383 31348 3c11c993a1d7e4662292855f9f7c8e1b ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1556162915 1938010 a757a460f2fd82210c4d6c8c2cbaedc2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1556162955 3868438 01932f005c0eb57bc10fa097c4a07b79 ""
-  "advancedmodernalgebra.aux" 1556519340 324 8a4582f28af7be597f5dabc1b3ad75e8 ""
-  "advancedmodernalgebra.tex" 1556519339 5976 ab9e93239899497ee877fc9cea7513e0 ""
+  "advancedmodernalgebra.aux" 1556524849 324 8a4582f28af7be597f5dabc1b3ad75e8 ""
+  "advancedmodernalgebra.tex" 1556524888 7096 a715d345c274ca3c6432417e5328d37a ""
   (generated)
+  "advancedmodernalgebra.aux"
+  "/home/scg/matrix_analysis_notes/advancedmodernalgebra.log"
   "advancedmodernalgebra.pdf"
   "/home/scg/matrix_analysis_notes/advancedmodernalgebra.pdf"
-  "advancedmodernalgebra.aux"
   "advancedmodernalgebra.log"
-  "/home/scg/matrix_analysis_notes/advancedmodernalgebra.log"
