@@ -115,7 +115,7 @@
         (\textbf{\textit{Euclid}})  Suppose there are k finite primes \(p_1, p_2, \cdots, p_k\).
         Then define \(M=\prod_{i=1}^k p_i + 1\), by Proposition 1.1, it is either a 
         prime or a product of primes. Since our assumption indicates \(M\) is not a 
-        prime, then it must be a product of primes. But the fact that \(M \over \prod_{i=1}^k p_k\) 
+        prime, then it must be a product of primes. But the fact that \(\dfrac{M}{\prod_{i=1}^k p_k}\) 
         gives remainder not 0 but 1 shows \(M\) cannot be divided by the existing 
         product of primes, by definition, \(M\) is a prime, which contradicting the 
         assumption. So there must be infinite number of primes.
@@ -145,4 +145,18 @@
             \end{cases}  
         \]
     \end{proposition}
+    \begin{proof}
+        Since \(p\) is a prime, i.e., \(p=p \cdot 1 \) then \((p, p) = p\). If \(p \mid b\), 
+        then we have \(p \mid p\) and \(p \mid b\) thus \((p, b)=p\); otherwise, if \(p \nmid b\), 
+        then we have \(1 \mid p\) and \(1 \mid b\) thus \((p, b)=1\).
+    \end{proof}
+    \begin{theorem}
+        If \(a\) and \(b\) are integers, then \((a, b)=d\) is a linear combination of \(a\)
+        and \(b\); that is, there are integers \(s\) and \(t\) with \(d=sa+tb\).
+    \end{theorem}
+    \begin{proof}
+        Since \((a,b)=d\), by division algorithm, we have \(a=dq_1\) and \(b=dq_2\) where 
+        \(q_1,\ q_2 \in \mathbb{Z}\). Let \(s=\dfrac{q_1}{2}\) and \(t=\dfrac{q_2}{2}\), 
+        then \(d=\dfrac{1}{2} \cdot (\dfrac{a}{q_1} + \dfrac{b}{q_2})\)
+    \end{proof}
 \end{document}
