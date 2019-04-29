@@ -155,8 +155,11 @@
         and \(b\); that is, there are integers \(s\) and \(t\) with \(d=sa+tb\).
     \end{theorem}
     \begin{proof}
-        Since \((a,b)=d\), by division algorithm, we have \(a=dq_1\) and \(b=dq_2\) where 
-        \(q_1,\ q_2 \in \mathbb{Z}\). Let \(s=\dfrac{q_1}{2}\) and \(t=\dfrac{q_2}{2}\), 
-        then \(d=\dfrac{1}{2} \cdot (\dfrac{a}{q_1} + \dfrac{b}{q_2})\)
+        Since \((a,b)=d\), by division algorithm, we have \(a=dq_a\) and \(b=dq_b\) where 
+        \(q_a,\ q_b \in \mathbb{Z}\). Then, \(\forall q_a,\ q_b \in \mathbb{Z}, \ \exists s,\ t \in \mathbb{Z}\)
+        such that \(sq_a=1-tq_b\). Thus 
+        \[d=\dfrac{a}{q_a}=\dfrac{b}{q_b}\]
+        \[aq_b=bq_a \implies saq_b=sbq_a=(1-tq_b)b\]
+        \[saq_b+tq_bb=b \implies sa+tb=\dfrac{b}{q_b}=d\]
     \end{proof}
 \end{document}
