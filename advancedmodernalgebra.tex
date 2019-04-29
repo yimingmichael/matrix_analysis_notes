@@ -3,8 +3,18 @@
 \usepackage[english]{babel}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\makeatletter
+\def\th@plain{%
+  \thm@notefont{}% same as heading font
+  \itshape % body font
+}
+\def\th@definition{%
+  \thm@notefont{}% same as heading font
+  \normalfont % body font
+}
+\makeatother
 \usepackage{amsmath}
-
+\usepackage{enumitem}
 \usepackage{tikz-cd}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 % \setcounter{section}{-1}
@@ -16,15 +26,98 @@
 \newtheorem*{example}{Example}
 \newtheorem*{remarks}{Remarks}
 \newtheorem*{definition}{Definition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem*{least_integer_axiom}{Least Integer Axiom\footnote{This property is usually called the \textit{well-ordering principle}}}
 
 \begin{document}
     \section{Things Past}
     \subsection{Some Number Theory}
+    \begin{definition}
+        The set of \textbf{natural numbers} \(\mathbb{N}\) is defined by \[\mathbb{N}=\{integers \  n: n \geq 0\}\]
+    \end{definition}
     \begin{least_integer_axiom}
         There is a smallest number \(n\) in every non-empty subset \(C\) of \(\mathbb{N}\).
     \end{least_integer_axiom}
-
+    \begin{definition}
+        A natural number is \textbf{prime} if \(p \geq 2\) and there is no factorization
+        \(p=ab\) where \(a < p\) and \(b < p\) are natural numbers.
+    \end{definition}
+    \begin{proposition}
+        Every integer \(n \geq 2\) is either a prime or a product of primes.
+    \end{proposition}
+    \begin{proof}
+        Let \(C\) be the subset of \(\mathbb{N}\) consisting of all those \(n \geq 2\)
+        for which the proposition is false. If \(C\) is non-empty, then there exists a 
+        smallest number \(k\) in \(C\). Since \(k\) is not a prime, then there are 
+        natural numbers \(a\) and \(b\) such that \(k=ab\), where \(a < k\) and \(b < k\). 
+        But \(a\) and \(b\) are not in \(C\) since \(k\) is the smallest in \(C\), 
+        then \(a\) and \(b\) are primes or product of primes. Therefore, the smallest number \(k\) 
+        in \(C\) is a product of primes, contradicting the proposition.
+    \end{proof}
+    \begin{theorem}[Mathematical Induction]
+        Let \(S(n)\) be a family of statements, one for each integer \(n \geq m\), where 
+        \(m\) is some fixed number. If 
+        \begin{enumerate}[label=(\roman*)]
+            \item \(S(m)\) is true, and
+            \item if \(S(n)\) is true implies \(S(n+1)\) is ture, 
+        \end{enumerate}
+        then \(S(n)\) is true for all integers \(n \geq m\).
+    \end{theorem}
+    \begin{proof}
+        Let \(C\) be the set of all integers \(n \geq m\) for which \(S(n)\) is false. 
+        If \(C\) is not empty, there is a smallest integer \(k\) in \(C\) such that \(S(k)\) 
+        is false. By (i) we have \(k > m\), then there exists an integer \(k-1 \notin C\) 
+        such that \(S(k-1)\) is true. By (ii), we have \(S((k-1)+1)=S(k)\), where \((k-1)+1=k \notin C\)
+        is also true. This contradicts the assumption that \(C\) is non-empty, thus \(C\)
+        is empty. Therefore, the proposition is true. 
+    \end{proof}
+    \begin{theorem}[Second Form of Induction]
+        Let \(S(n)\) be a family of statements, one for each integer \(n \geq m\), where 
+        \(m\) is some fiexed integer. If 
+        \begin{enumerate}
+            \item \(S(m)\) is true, and
+            \item if \(S(k)\) is true for all \(k\) with \(m \leq k < n\), then \(S(n)\) is itself true,
+        \end{enumerate}
+        then \(S(n)\) is true for all integers \(n \geq m\).
+    \end{theorem}
+    \begin{proof}
+        Let \(C\) be the set of all integers \(n \geq m\) for which \(S(n)\) is false. 
+        If \(C\) is not empty, there is a smallest integer \(k\) in \(C\) such that \(S(k)\) 
+        is false. By (i) we have \(k > m\), then there exists an integer \(k-1 \notin C\) 
+        such that \(S(k-1)\) is true. Then by (ii), since \(S(i)\) is true for all \(i\) 
+        with \(m \leq i < k\), then \(S(k)\) is itself true, contradicting the assumption 
+        that \(S(k)\) is false.
+    \end{proof}
+    \begin{theorem}[Division Theorem]
+        Given integers \(a\) and \(b\) with \(a \neq 0\), there exist unique integers 
+        \(q\) and \(r\) with \[b=qa+r \ \ and \ \ 0 \leq r < |a|\]
+    \end{theorem}
+    \begin{proof}
+        Suppose there exist another pair of integers \(q'\) and \(r'\) with \(b=q'a+r'\) 
+        where \(0 \leq r' < |a|\). Then \(qa+r=q'a+r' \implies |(q-q')a|=|r'-r|\). 
+        Since \(0 \leq |r'-r| < |r'| < |a| \implies 0 \leq |(q-q')a| < |a|\), if \(a>0\), 
+        then \(0 \leq |q-q'| < 1\), recall that \(q\) and \(q'\) are both integers, 
+        then \(q=q'\); if \(a<0\), then \(-1 < |q-q'| \leq 0 \implies q=q'\). Both cases 
+        implies \(r=r'\) as well. This contradicts the assumption, therefore, the integers 
+        are unique.
+    \end{proof}
+    \begin{definition}
+        If \(a\) and \(b\) are integers with \(a \neq 0\), then the integers \(q\) and 
+        \(r\) occurring in the division algorithm are called \textbf{quotient} and 
+        \textbf{remainder} after dividing \(b\) by \(a\).
+    \end{definition}
+    \begin{corollary}
+        There are infinitely many primes.
+    \end{corollary}
+    \begin{proof}
+        (\textbf{\textit{Euclid}})  Suppose there are k finite primes \(p_1, p_2, \cdots, p_k\).
+        Then define \(M=\prod_{i=1}^k p_i + 1\), by Proposition 1.1, it is either a 
+        prime or a product of primes. Since our assumption indicates \(M\) is not a 
+        prime, then it must be a product of primes. But the fact that \(M \over \prod_{i=1}^k p_k\) 
+        gives remainder not 0 but 1 shows \(M\) cannot be divided by the existing 
+        product of primes, by definition, \(M\) is a prime, which contradicting the 
+        assumption.
+    \end{proof}
 \end{document}
