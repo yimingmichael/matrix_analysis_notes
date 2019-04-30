@@ -14,6 +14,7 @@
 }
 \makeatother
 \usepackage{amsmath}
+\usepackage{bm}
 \usepackage{enumitem}
 \usepackage{tikz-cd}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
@@ -127,7 +128,7 @@
     \end{definition}
     \begin{definition}
         A \textbf{common divisor} of integers \(a\) and \(b\) is an integer \(c\) with 
-        \(c \mid a\) and \(c \mid b\). The \textbf{greatest common divisor} or \textbf{gcd} 
+        \(c \mid a\) and \(c \mid b\). The \textbf{greatest common divisor} or \(\bm{\gcd}\) 
         of \(a\) and \(b\), denoted by \((a, b)\), is defined by 
         \begin{equation*}
             (a, b) = \begin{cases}
@@ -156,10 +157,31 @@
     \end{theorem}
     \begin{proof}
         Since \((a,b)=d\), by division algorithm, we have \(a=dq_a\) and \(b=dq_b\) where 
-        \(q_a,\ q_b \in \mathbb{Z}\). Then, \(\forall q_a,\ q_b \in \mathbb{Z}, \ \exists s,\ t \in \mathbb{Z}\)
-        such that \(sq_a=1-tq_b\). Thus 
+        \(q_a,\ q_b \in \mathbb{Z}\). If \(q_a=0=q_b\), the statement is obviously true. 
+        Then, \(\forall q_a,\ q_b \in \mathbb{Z}, \ \exists s,\ t \in \mathbb{Z}\) such 
+        that \(sq_a=1-tq_b\). Thus 
         \[d=\dfrac{a}{q_a}=\dfrac{b}{q_b}\]
         \[aq_b=bq_a \implies saq_b=sbq_a=(1-tq_b)b\]
         \[saq_b+tq_bb=b \implies sa+tb=\dfrac{b}{q_b}=d\]
     \end{proof}
+    \begin{proposition}
+        Let \(a\) and \(b\) be integers. A nonnegative common divisor \(d\) is their 
+        \(\gcd\) if and only if \(c \mid d\) for every common divisor \(c\).
+    \end{proposition}
+    \begin{proof}
+        Suppose \(c\) is a common divisor of both \(a\) and \(b\), and \(C\) a set of 
+        all common divisors of \(a\) and \(b\). By definition of \(\gcd\) we have 
+        \(d=\max S\), \(\forall c \in S\), thus \(c \mid d\). Conversely, if \(c \mid d\)
+        for every common divisor \(c\), then \(d=\max S\).
+    \end{proof}
+    \begin{corollary}
+        Let \(I\) be a subset of \(\mathbb{Z}\) such that 
+        \begin{enumerate}
+            \item \(0 \in I\);
+            \item if \(a,\ b \in I\), then \(a-b \in I\);
+            \item if \(a \in I\) and \(q \in \mathbb{Z}\), then \(qa \in I\).
+        \end{enumerate}
+        Then there is a natural number \(d \in I\) consisting precisely of all the 
+        multiples of \(d\).
+    \end{corollary}
 \end{document}
