@@ -116,7 +116,7 @@
         (\textbf{\textit{Euclid}})  Suppose there are k finite primes \(p_1, p_2, \cdots, p_k\).
         Then define \(M=\prod_{i=1}^k p_i + 1\), by Proposition 1.1, it is either a 
         prime or a product of primes. Since our assumption indicates \(M\) is not a 
-        prime, then it must be a product of primes. But the fact that \(\dfrac{M}{\prod_{i=1}^k p_k}\) 
+        prime, then it must be a product of primes. But the fact that \(\frac{M}{\prod_{i=1}^k p_k}\) 
         gives remainder not 0 but 1 shows \(M\) cannot be divided by the existing 
         product of primes, by definition, \(M\) is a prime, which contradicting the 
         assumption. So there must be infinite number of primes.
@@ -160,9 +160,9 @@
         \(q_a,\ q_b \in \mathbb{Z}\). If \(q_a=0=q_b\), the statement is obviously true. 
         Then, \(\forall q_a,\ q_b \in \mathbb{Z}, \ \exists s,\ t \in \mathbb{Z}\) such 
         that \(sq_a=1-tq_b\). Thus 
-        \[d=\dfrac{a}{q_a}=\dfrac{b}{q_b}\]
+        \[d=\frac{a}{q_a}=\frac{b}{q_b}\]
         \[aq_b=bq_a \implies saq_b=sbq_a=(1-tq_b)b\]
-        \[saq_b+tq_bb=b \implies sa+tb=\dfrac{b}{q_b}=d\]
+        \[saq_b+tq_bb=b \implies sa+tb=\frac{b}{q_b}=d\]
     \end{proof}
     \begin{proposition}
         Let \(a\) and \(b\) be integers. A nonnegative common divisor \(d\) is their 
@@ -184,4 +184,48 @@
         Then there is a natural number \(d \in I\) consisting precisely of all the 
         multiples of \(d\).
     \end{corollary}
+    \begin{proof}
+        Suppose there is no such a natural number \(d \in I\). Then \(\exists q' \in \mathbb{Z}\)
+        such that \(q'd \notin I\). This contradicts the third fact, thus the statement is true.
+    \end{proof}
+    \begin{theorem}[Euclid's Lemma]
+        If \(p\) is a prime and \(p \mid ab\), then \(p \mid a\) or \(p \mid b\). More 
+        generally, if a prime \(p\) devides a product \(\prod_{i=1}^n a_i\), then it must 
+        divide at least one of the factors \(a_i\).
+    \end{theorem}
+    \begin{proof}
+        If \(p \nmid a\), then \((p, a)=1\) and \(1=sp+ta\). Then \(b=spb+tab\) is a 
+        multiple of \(p\). Thus the first statement is true.\\
+        As for the second statement, we prove by induction:
+        \begin{enumerate}
+            \item \(n=1\), \(p\) divides \(a_1\) is obviously true;
+            \item Suppose \(n=k\) is true, i.e., a prime \(p\) dividing a product 
+            \((a_1\cdots a_k)\) implies \(p\) must divide at least one of the factors 
+            \(a_i\) is true. Then, when \(n=k+1\), it is still true as the factor (factors) 
+            still exists in the new product \((a_1\cdots a_k a_{k+1})\), thus \(n=k+1\) is 
+            true.
+        \end{enumerate}
+        Since \(n=1\) is true and \(n=k\) true implies \(n=k+1\) also true, therefore, by 
+        induction the statement is true for all \(n \in \mathbb{Z}\).
+    \end{proof}
+    \begin{definition}
+        Call integers \(a\) and \(b\) are \textbf{relatively prime} is \(\gcd(a, b)=1\).
+    \end{definition}
+    \begin{corollary}
+        Let \(a\), \(b\), and \(c\) be integers. If \(c\) and \(a\) are relaively prime 
+        and if \(c \mid ab\), then \(c \mid b\).
+    \end{corollary}
+    \begin{proof}
+        Because \(c \mid ab\), by Euclid's Theorem, \(c \mid a\) or \(c \mid b\). 
+        Since \(c\) and \(a\) are relatively prime, \(c \nmid a\). Thus \(c \mid b\).
+    \end{proof}
+    \begin{proposition}
+        If \(p\) is a prime, then \(p \mid \binom{p}{j}\) for \(0 < j < p\).
+    \end{proposition}
+    \begin{proof}
+        By definition, the binomial coefficient \(\binom{p}{j}=\frac{p!}{j!(p-j)!}\), 
+        such that \(p!=\binom{p}{j} j! (p-j)!\), as \(p \mid p!\), then \(p \mid \binom{p}{j}j!(p-j)!\). 
+        By Corollary 1.11, since \(p \nmid j!(p-j)!\), \(p \mid \binom{p}{j}\).
+    \end{proof}
+    
 \end{document}

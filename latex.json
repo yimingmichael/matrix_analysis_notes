@@ -51,6 +51,18 @@
 		"description": "highlight math mode"
 	},
 
+	"bold font":{
+		"prefix": "bf",
+		"body": "\\textbf{$1}$0",
+		"description": "bold font"
+	},
+
+	"bold font in math mode":{
+		"prefix": "ib",
+		"body": "\\bm{$1}$0",
+		"description": "bold font in math, use bm"
+	},
+
 	// Greek letters
 	"alpha":{
 		"prefix": "af",
@@ -239,5 +251,17 @@
 		"prefix": "ti",
 		"body": "\\times",
 		"description": "Times operator x"
+	},
+
+	"absolute value":{
+		"prefix": "abs",
+		"body": "|$1|$0",
+		"description": "absolute value in math mode"
+	},
+
+	"division line":{
+		"prefix": "di",
+		"body": "\\frac{$1}{$2}$0",
+		"description": "division line"
 	},
 }
