@@ -18,6 +18,13 @@
 \usepackage{enumitem}
 \usepackage{tikz-cd}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
+% \usepackage[]{algorithm2e}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
 % \setcounter{section}{-1}
 
 % \usepackage{multicol}
@@ -226,6 +233,46 @@
         By definition, the binomial coefficient \(\binom{p}{j}=\frac{p!}{j!(p-j)!}\), 
         such that \(p!=\binom{p}{j} j! (p-j)!\), as \(p \mid p!\), then \(p \mid \binom{p}{j}j!(p-j)!\). 
         By Corollary 1.11, since \(p \nmid j!(p-j)!\), \(p \mid \binom{p}{j}\).
+    \end{proof} 
+    \begin{proposition}
+        \(\)
+        \begin{enumerate}
+            \item If \(a\) and \(b\) are integers, then \(a\) and \(b\) are relatively prime if and only if there are integers \(s\) and \(t\) with \(1=sa+tb\).
+            \item If \(d=(a, b)\), where \(a\) and \(b\) are not both \(0\), then \((a/d, b/d)\)=1.
+        \end{enumerate}
+    \end{proposition}
+    \begin{proof}
+        1. Since \((a, b)=1\), by Theorem 1.7, \(1=sa+tb\); conversely, suppose there is a common divisor \(d=(a, b) \neq 1\), Then \(d=s'a+t'b\), and \((s'-sd)a + (t'-td)b=0\). This implies that \(0\) is also a common dividor, which is false.
+        2. Since \(d=(a,b)\), then \(d=sa+tb\) where \(s\) and \(t\) are integers. Thus \(1=s(\frac{a}{d})+t(\frac{b}{d})\).
     \end{proof}
-    
+    \begin{theorem}[Euclidean Algorithm]
+        Let \(a\) and \(b\) be positive integers. There is an algorithm that finds the 
+        \(gcd\), \(d=(a,b)\), and there is an algorithm that finds a pair of integers 
+        \(s\) and \(t\) with \(d=sa+tb\).
+    \end{theorem}
+    \begin{proof}
+        
+    \end{proof}
+    \begin{algorithm}
+        \caption{My algorithm}\label{euclid}
+        \begin{algorithmic}[1]
+            \Procedure{MyProcedure}{}
+            \State $\textit{stringlen} \gets \text{length of }\textit{string}$
+            \State $i \gets \textit{patlen}$
+            \BState \emph{top}:
+            \If {$i > \textit{stringlen}$} \Return false
+            \EndIf
+            \State $j \gets \textit{patlen}$
+            \BState \emph{loop}:
+            \If {$\textit{string}(i) = \textit{path}(j)$}
+            \State $j \gets j-1$.
+            \State $i \gets i-1$.
+            \State \textbf{goto} \emph{loop}.
+            \State \textbf{close};
+            \EndIf
+            \State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
+            \State \textbf{goto} \emph{top}.
+            \EndProcedure
+        \end{algorithmic}
+    \end{algorithm}
 \end{document}
